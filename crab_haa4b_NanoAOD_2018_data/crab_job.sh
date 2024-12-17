@@ -68,7 +68,13 @@ do
     IFS='/' read -r -a datasetNameInParts <<< "${dataset}"   # split dataset by '/'      
     datasetNamePart1=${datasetNameInParts[1]} # dataset (physics) name is at index 1
     datasetNamePart2=${datasetNameInParts[2]}
+    datasetNamePart3=${datasetNameInParts[3]}
     datasetName_toUse=$datasetNamePart1
+
+    # For data, used datasetNamePart1_datasetNamePart2 as datasetName_toUse
+    if [[ ${testmystring} != *"SIM"* ]]; then
+        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2}"
+    fi
 
     # Check if datasetNamePart2 contains 'ext1' strin, and if so, then update datasetName_toUse  
     IFS='_' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"    # split dataset by '_' 
