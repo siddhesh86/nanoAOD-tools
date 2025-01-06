@@ -13,5 +13,6 @@ crab*/cout*.txt
 crab*/FrameworkJobReport.xml
 crab_customNanoAODAndPostprocessing/crab_NanoPost1/
 crab_haa4b_NanoAOD_2018_mc/crab
+crab_haa4b_NanoAOD_2018_data/crab/
 */cout_tmp.txt
 */crab.log

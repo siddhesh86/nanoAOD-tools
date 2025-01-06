@@ -21,10 +21,14 @@ declare -a datasets=()
 
 # Data
 datasets+=(
-    "/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    "/JetHT/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    "/JetHT/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-   " /JetHT/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"    
+    #"/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #"/JetHT/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #"/JetHT/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #" /JetHT/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"   
+    "/MET/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"
 ) 
 
 
@@ -71,9 +75,15 @@ do
     datasetNamePart3=${datasetNameInParts[3]}
     datasetName_toUse=$datasetNamePart1
 
+    outputDatasetTag_ext=""
     # For data, used datasetNamePart1_datasetNamePart2 as datasetName_toUse
     if [[ ${testmystring} != *"SIM"* ]]; then
-        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2}"
+        # /JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD
+        IFS='-' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"
+        datasetNamePart2_0=${datasetNamePart2_subparts[0]}
+        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2_0}"
+        #datasetName_toUse="${datasetNamePart1}_${datasetNamePart2}"
+        outputDatasetTag_ext="_${datasetNamePart2_0}"
     fi
 
     # Check if datasetNamePart2 contains 'ext1' strin, and if so, then update datasetName_toUse  
@@ -107,9 +117,9 @@ do
     ## <<< ***************** >>>
     if [ "$CMD" = "submit" ]; then
 	    ## Submit crab jobs
-	    echo crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}"
+	    echo crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}" Data.outputDatasetTag="r1${outputDatasetTag_ext}"
 	    if [ "$TST" != "test" ] && [ "$TST" != "Test" ] && [ "$TST" != "TEST" ]; then
-	        crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}"
+	        crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}" Data.outputDatasetTag="r1${outputDatasetTag_ext}"
 	    fi
     fi
 
