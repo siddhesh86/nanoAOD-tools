@@ -12,24 +12,28 @@
 ## '--jobids' : Comma-separated list of job IDs
 ## <<< crab resubmit >>>
 ## '--force'  : What it sounds like
-## '--maxjobruntime=3000' : Allow job to run for 2 days
+## '--maxjobruntime=3000' : Allow job to run for 2 days.        --maxjobruntime=7200
 
+### Settings ----------------------------------------------------------------------------------------------------------
+#declare -a MassAList=(12 15 20 25 30 35 40 45 50 55 60)
+declare -a MassAList=(12 15 20 25 30 35)
+#declare -a MassAList=(15 20 25 30) 
+#declare -a MassAList=(25 30) 
 
-## Construct the string for 'SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*' samples in DAS (https://cmsweb.cern.ch/das/)
-## dasgoclient --query="dataset=/SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16*/MINIAODSIM"
+## Construct the string for 'SSUSY_GluGluH_01J_HToAATo4B_Pt150_M*' samples in DAS (https://cmsweb.cern.ch/das/)
+## dasgoclient --query="dataset=/SUSY_GluGluH_01J_HToAATo4B_Pt150_M*/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16*/MINIAODSIM"
 declare -a datasets=()
 
-# ZJets
-datasets+=(
-#"/ZJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-#    "/ZJetsToQQ_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-    "/ZJetsToQQ_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-    "/ZJetsToQQ_HT-800toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-) 
+for mA in "${MassAList[@]}"
+do
+    datasets+=("/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-${mA}_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1/MINIAODSIM")
+done
+
+### Settings End ------------------------------------------------------------------------------------------------------ 
 
 
 
- 
+
 
 CMD=$1
 TST=$2

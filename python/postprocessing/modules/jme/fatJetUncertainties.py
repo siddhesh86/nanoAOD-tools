@@ -73,8 +73,12 @@ class fatJetUncertaintiesProducer(Module):
         # smear jet pT to account for measured difference in JER between data
         # and simulation.
         if jerTag != "":
-            self.jerInputFileName = jerTag + "_PtResolution_" + jetType + ".txt"
-            self.jerUncertaintyInputFileName = jerTag + "_SF_" + jetType + ".txt"
+            jetType_toUse = jetType
+            # AK8Puppi JMR for 2017 does not exist, so used that for AK4chs <<<<<<<< Edit by Siddhesh
+            if jerTag == 'Summer19UL17_JRV2_MC':  jetType_toUse = 'AK4PFchs' 
+
+            self.jerInputFileName = jerTag + "_PtResolution_" + jetType_toUse + ".txt"
+            self.jerUncertaintyInputFileName = jerTag + "_SF_" + jetType_toUse + ".txt"
         else:
             print(
                 "WARNING: jerTag is empty!!! This module will soon be "

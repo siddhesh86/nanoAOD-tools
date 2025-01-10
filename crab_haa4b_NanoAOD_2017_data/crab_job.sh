@@ -16,16 +16,21 @@
 
 
 ## Construct the string for 'SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*' samples in DAS (https://cmsweb.cern.ch/das/)
-## dasgoclient --query="dataset=/SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16*/MINIAODSIM"
+## dasgoclient --query="dataset=/*/Run2018*-UL2018_MiniAODv2_GT36*/MINIAOD"
 declare -a datasets=()
 
-# ZJets
+# Data
 datasets+=(
-#"/ZJetsToQQ_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-#    "/ZJetsToQQ_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-    "/ZJetsToQQ_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
-    "/ZJetsToQQ_HT-800toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2/MINIAODSIM"
+    #"/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #"/JetHT/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #"/JetHT/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    #" /JetHT/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"   
+    "/MET/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/MET/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"
 ) 
+
 
 
 
@@ -67,7 +72,19 @@ do
     IFS='/' read -r -a datasetNameInParts <<< "${dataset}"   # split dataset by '/'      
     datasetNamePart1=${datasetNameInParts[1]} # dataset (physics) name is at index 1
     datasetNamePart2=${datasetNameInParts[2]}
+    datasetNamePart3=${datasetNameInParts[3]}
     datasetName_toUse=$datasetNamePart1
+
+    outputDatasetTag_ext=""
+    # For data, used datasetNamePart1_datasetNamePart2 as datasetName_toUse
+    if [[ ${testmystring} != *"SIM"* ]]; then
+        # /JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD
+        IFS='-' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"
+        datasetNamePart2_0=${datasetNamePart2_subparts[0]}
+        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2_0}"
+        #datasetName_toUse="${datasetNamePart1}_${datasetNamePart2}"
+        outputDatasetTag_ext="_${datasetNamePart2_0}"
+    fi
 
     # Check if datasetNamePart2 contains 'ext1' strin, and if so, then update datasetName_toUse  
     IFS='_' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"    # split dataset by '_' 
@@ -100,9 +117,9 @@ do
     ## <<< ***************** >>>
     if [ "$CMD" = "submit" ]; then
 	    ## Submit crab jobs
-	    echo crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}"
+	    echo crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}" Data.outputDatasetTag="r1${outputDatasetTag_ext}"
 	    if [ "$TST" != "test" ] && [ "$TST" != "Test" ] && [ "$TST" != "TEST" ]; then
-	        crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}"
+	        crab submit -c crab_config.py $OPTS Data.inputDataset="${dataset}" General.requestName="${datasetName_toUse}" Data.outputDatasetTag="r1${outputDatasetTag_ext}"
 	    fi
     fi
 
