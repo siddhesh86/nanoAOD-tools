@@ -9,21 +9,22 @@ import ROOT as R
 
 R.gROOT.SetBatch(True)  ## Don't display histograms or canvases when drawn
 
-MAX_EVT = -1  ## Maximum number of events to process per MC sample
-PRT_EVT = 10000    ## Print every Nth event while processing
-DEBUG   = False
+MAX_EVT = -1     ## Maximum number of events to process per MC sample
+PRT_EVT = 10000000  ## Print every Nth event while processing
+VERBOSE = False
+DEBUG   = [] ## [luminosityBlock, event] to debug
 
 ## Location of postprocessed input files
 IN_DIR = '/eos/cms/store/user/abrinke1/NanoPost/hadd/'
 ## Haa4b selection categories, as of end-of-summer 2024
 CATS = ['gg0lHi','gg0lLo','VBFjjHi','VBFjjLo','ZvvHi','ZvvLo','Vjj','ttHad',
-        'WlvHi_m','WlvHi_e','WlvLo_m','WlvLo_e','Zll_m','Zll_e',
-        'ttbblv_m','ttbblv_e','ttblv_m','ttblv_e','ttll_m','ttll_e',
-        '2lSS','3l','other']
+       'WlvHi_m','WlvHi_e','WlvLo_m','WlvLo_e','Zll_m','Zll_e',
+       'ttbblv_m','ttbblv_e','ttblv_m','ttblv_e','ttll_m','ttll_e',
+       '2lSS','3l','other']
 ## MC samples to test
-SAMPS = ['GluGluH_M-15','GluGluH_M-25','GluGluH_M-40','GluGluH_M-55','VBFH_M-30',
-         'WH_M-20','ZH_M-20','ZH_M-40','TTH_M-15','TTH_M-55']
-#SAMPS = ['GluGluH_M-15']
+#SAMPS = ['GluGluH_M-15','GluGluH_M-25','GluGluH_M-40','GluGluH_M-55','VBFH_M-30',
+#         'WH_M-20','ZH_M-20','ZH_M-40','TTH_M-15','TTH_M-55']
+SAMPS = ['GluGluH_M-25']
 
 
 ## Count passing events for each sample in each category
@@ -59,17 +60,22 @@ for samp in SAMPS:
 
         ch.GetEntry(iEvt)
 
-        if DEBUG: print('tagHaa4b_v1 = %.4f, cat_idx = %d, passFilters = %d' % (ch.Haa4b_FatH_tagHaa4b_v1,
-                                                                                ch.Haa4b_cat_idx,
-                                                                                ch.Haa4b_passFilters))
-        if ch.Haa4b_FatH_tagHaa4b_v1 < 0.975: continue  ## Minimum Haa4b vs. QCD cut, WP60
-        if ch.Haa4b_cat_idx <= 0:             continue  ## Must pass at least one category
-        if ch.Haa4b_passFilters != 1:         continue  ## Must pass event filters
-        if DEBUG: print('Passed initial selection!')
+        if len(DEBUG) > 0:
+            if ch.luminosityBlock != DEBUG[0] or ch.event != DEBUG[1]:
+                continue
+            print('Starting LS = %d, event = %d' % (ch.luminosityBlock, ch.event))
+
+        if VERBOSE: print('tagHaa4b_v1 = %.4f, cat_idx = %d, passFilters = %d' % (ch.Haa4b_FatH_tagHaa4b_v1,
+                                                                                  ch.Haa4b_cat_idx,
+                                                                                  ch.Haa4b_passFilters))
+        if ch.Haa4b_FatH_tagHaa4b_v1 < 0.975:    continue  ## Minimum Haa4b vs. QCD cut, WP60
+        if ch.Haa4b_isHad + ch.Haa4b_isLep != 1: continue  ## AK8 Higgs candidate with no overlapping trigger lepton
+        if ch.Haa4b_passFilters != 1:            continue  ## Must pass event filters
+        if VERBOSE: print('Passed initial selection!')
 
         ## gg0l
         if ch.Haa4b_cat_gg0l == 1 and ch.Haa4b_FatH_tagHaa4b_v1 > 0.992 and \
-           (ch.Haa4b_trigFat + ch.Haa4b_trigBtag >= 1):
+           (ch.Haa4b_trigFat + ch.Haa4b_trigBtag >= 1) and ch.Haa4b_nJetBtag == 0:
             if ch.Haa4b_FatH_pt > 400:
                 count[samp]['gg0lHi'] += 1
             elif ch.Haa4b_FatH_pt > 250:
@@ -77,7 +83,7 @@ for samp in SAMPS:
         ## VBFjj
         if ch.Haa4b_cat_VBFjj == 1 and ch.Haa4b_FatH_tagHaa4b_v1 > 0.992 and \
            (ch.Haa4b_trigFat + ch.Haa4b_trigBtag + ch.Haa4b_trigVBF) >= 1 and \
-           ch.Haa4b_FatH_pt > 250:
+           ch.Haa4b_FatH_pt > 250 and ch.Haa4b_nJetBtag == 0:
             if ch.Haa4b_dijet_mass > 900 and ch.Haa4b_dijet_dEta > 3.0:
                 count[samp]['VBFjjHi'] += 1
             else:
@@ -94,7 +100,7 @@ for samp in SAMPS:
             count[samp]['Vjj'] += 1
         ## ttHad
         if ch.Haa4b_cat_ttHad == 1 and (ch.Haa4b_trigFat + ch.Haa4b_trigBtag) >= 1 and \
-           ch.Haa4b_FatH_pt > 250 and ch.Haa4b_FatX_tagTop_max > 0.8:
+           ch.Haa4b_FatH_pt > 250 and ch.Haa4b_FatX_tagTop_max > 0.8 and ch.Haa4b_nJetBtag >= 1:
             count[samp]['ttHad'] += 1
 
         ## All lepton categories must have trigger lepton and fire trigger
@@ -103,19 +109,20 @@ for samp in SAMPS:
         flav = ('_m' if ch.Haa4b_isMu else '_e')
 
         ## Wlv
-        if ch.Haa4b_cat_Wlv == 1:
+        if ch.Haa4b_cat_Wlv == 1 and ch.Haa4b_nJetBtag == 0:
             pure = ('Hi' if ch.Haa4b_lepMET_pt > 300 else 'Lo')
             count[samp]['Wlv'+pure+flav] += 1
         ## Zll
         if ch.Haa4b_cat_Zll == 1:
             count[samp]['Zll'+flav] += 1
         ## ttlv
-        if ch.Haa4b_cat_ttlv == 1:
+        if ch.Haa4b_iLep1 >= 0 and ch.Haa4b_iLep2 < 0 and ch.Haa4b_nJetBtag >= 1:
             nbs = ('bb' if ch.Haa4b_nJetBtag >= 2 else 'b')
             count[samp]['tt'+nbs+'lv'+flav] += 1
         ## ttll
-        if ch.Haa4b_cat_ttll == 1:
-            count[samp]['ttll'+flav] += 1
+        if ch.Haa4b_dilep_charge == 0 and ch.Haa4b_dilep_mass > 12 and ch.Haa4b_nJetBtag >= 1:
+            if ch.Haa4b_cat_Zll == 0 and ch.Haa4b_cat_3l == 0:
+                count[samp]['ttll'+flav] += 1
         ## 2lSS, 3l, other
         if ch.Haa4b_cat_2lSS == 1:
             count[samp]['2lSS'] += 1
@@ -124,6 +131,10 @@ for samp in SAMPS:
         if ch.Haa4b_cat_other == 1:
             count[samp]['other'] += 1
 
+        if len(DEBUG) > 0:
+            if ch.luminosityBlock != DEBUG[0] or ch.event != DEBUG[1]:
+                print('Finished LS = %d, event = %d' % (ch.luminosityBlock, ch.event))
+                break
     ## End loop: for iEvt in range(nEntries)
 
     print('\n*** Finished looking at sample %s ***\n\n' % samp)
