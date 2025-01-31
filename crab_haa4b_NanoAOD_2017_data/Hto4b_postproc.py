@@ -5,6 +5,7 @@ from PhysicsTools.NanoAODTools.postprocessing.modules.common.puWeightProducer im
 from PhysicsTools.NanoAODTools.postprocessing.modules.common.PrefireCorr import *
 from PhysicsTools.NanoAODTools.postprocessing.modules.btv.btagSFProducerUL import *
 from PhysicsTools.NanoAODTools.postprocessing.modules.haa4b.objectSelection import Haa4bObjectSelectionProducer
+from PhysicsTools.NanoAODTools.postprocessing.modules.haa4b.triggerBits import Haa4bTriggerBitsProducer
 from PhysicsTools.NanoAODTools.postprocessing.modules.haa4b.genParticles import Haa4bGenParticlesBranches
 from PhysicsTools.NanoAODTools.postprocessing.framework.postprocessor import PostProcessor
 from importlib import import_module
@@ -17,8 +18,8 @@ import re
 
 runLocally = False
 isMC = False
-DataYear  = 'UL2018'
-RunPeriod = 'D'
+DataYear  = 'UL2017'
+RunPeriod = 'F'
   
 RunEraForMC = {
     'UL2016_preVFP': 'E',
@@ -142,14 +143,18 @@ if isMC:
         Haa4bGenParticlesBranches(),
     ])
 
-modulesToRun.extend([
-    Haa4bObjectSelectionProducer(isMC, DataYear.replace('UL', ''))
-])
+    modulesToRun.extend([
+        Haa4bObjectSelectionProducer(isMC, DataYear.replace('UL', ''))
+    ])
+
+    if '18' in DataYear:
+        modulesToRun.extend([
+            Haa4bTriggerBitsProducer(isMC, DataYear.replace('UL', ''))
+        ])
 
 fnames = ["PNet_v1.root"] 
 if runLocally:
-    fnames = ["/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2018_data/PNet_v1.root"]
-
+    fnames = ["PNet_v1.root"] 
 
 
 p = PostProcessor(

@@ -116,8 +116,10 @@ git cms-addpkg SimDataFormats/JetMatching
 git clone -b PNet_v2_2024_11_22_sig git@github.com:abrinke1/RecoBTag-Combined.git RecoBTag/Combined/data
 
 git remote add abrinke1 https://gitlab.cern.ch/abrinke1/cmssw.git 
-git checkout -b PNet_v2_2024_11_22_sig
-git pull abrinke1 PNet_v2_2024_11_22_sig
+## Used for 2018. git checkout -b PNet_v2_2024_11_22_sig
+## Used for 2018. git pull abrinke1 PNet_v2_2024_11_22_sig
+git checkout -b PNet_v2_2024_11_22_bkg         # Use for 2016, 2017
+git pull abrinke1 PNet_v2_2024_11_22_bkg       # Use for 2016, 2017
 
 git clone -b PNet_v2_2024_11_22_sig git@github.com:abrinke1/PFNano.git PhysicsTools/PFNano
 git clone -b nanoPostProc_SS git@github.com:siddhesh86/nanoAOD-tools.git PhysicsTools/NanoAODTools

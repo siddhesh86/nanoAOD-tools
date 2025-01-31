@@ -16,19 +16,16 @@
 
 
 ## Construct the string for 'SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*' samples in DAS (https://cmsweb.cern.ch/das/)
-## dasgoclient --query="dataset=/*/Run2018*-UL2018_MiniAODv2_GT36*/MINIAOD"
+## dasgoclient --query="dataset=/*/Run2017*-UL2017_MiniAODv2*/MINIAOD""
 declare -a datasets=()
 
 # Data
 datasets+=(
-    #"/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    #"/JetHT/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    #"/JetHT/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    #" /JetHT/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"   
-    "/MET/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    "/MET/Run2018B-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    "/MET/Run2018C-UL2018_MiniAODv2_GT36-v1/MINIAOD"
-    "/MET/Run2018D-UL2018_MiniAODv2_GT36-v1/MINIAOD"
+    "/JetHT/Run2017B-UL2017_MiniAODv2-v1/MINIAOD"
+    "/JetHT/Run2017C-UL2017_MiniAODv2-v1/MINIAOD"
+    "/JetHT/Run2017D-UL2017_MiniAODv2-v1/MINIAOD"
+    "/JetHT/Run2017E-UL2017_MiniAODv2-v1/MINIAOD"
+    "/JetHT/Run2017F-UL2017_MiniAODv2-v1/MINIAOD"
 ) 
 
 
@@ -78,7 +75,7 @@ do
     outputDatasetTag_ext=""
     # For data, used datasetNamePart1_datasetNamePart2 as datasetName_toUse
     if [[ ${testmystring} != *"SIM"* ]]; then
-        # /JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD
+        # "/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD"
         IFS='-' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"
         datasetNamePart2_0=${datasetNamePart2_subparts[0]}
         datasetName_toUse="${datasetNamePart1}_${datasetNamePart2_0}"

@@ -154,7 +154,7 @@ if isMC:
 
 fnames = ["PNet_v1.root"] 
 if runLocally:
-    fnames = ["/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/CMSSW_10_6_30/src/PhysicsTools/NanoAOD/output/HtoAA_addHto4bPlus_ggH_HtoAA_MH-125_MA-32.5_Pt170_Eta2p4_Msoft10_Xbb0p6_skimFatCand_1k.root"]
+    fnames = ["PNet_v1.root"] 
 
 
 
