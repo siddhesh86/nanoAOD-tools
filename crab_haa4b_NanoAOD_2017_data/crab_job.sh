@@ -16,7 +16,7 @@
 
 
 ## Construct the string for 'SUSY_ZH_ZToAll_HToAATo4B_Pt150_M*' samples in DAS (https://cmsweb.cern.ch/das/)
-## dasgoclient --query="dataset=/*/Run2017*-UL2017_MiniAODv2*/MINIAOD""
+## dasgoclient --query="dataset=/*/Run2017*-UL2017_MiniAODv2*/MINIAOD"
 declare -a datasets=()
 
 # Data
