@@ -95,6 +95,7 @@ This module has the same structure of its producer as `exampleProducer`, but in 
 ## HToAATo4b NanoAOD v2 production: instructions
 
 ### Setting up repository
+Set up repository using the following recipe. The recipe has been updated for changes for 2017.
 
 ```
 cmssw-el7
@@ -139,7 +140,16 @@ voms-proxy-init -voms cms -rfc -valid 192:00
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 
 cd PhysicsTools/NanoAODTools/
+
+# list directories in NanoAODTools repository
+ls
+# Directories inside NanoAODTools will look like the following:
+# BuildFile.xml  README.md  crab  crab_haa4b_NanoAOD_2017_data  crab_haa4b_NanoAOD_2017_mc  crab_haa4b_NanoAOD_2018_data  crab_haa4b_NanoAOD_2018_mc  crab_invalidatePubshData  data  interface  macros  python  scripts  src  standalone
 ```
+'PhysicsTools/NanoAODTools/' repository has CRAB job submission directories with name 'crab_haa4b_NanoAOD_<Year>_<data/mc>'. \
+Depending up on Year and data/mc for NanoAOD reprocessing, use the corresponding 'crab_haa4b_NanoAOD_<Year>_<data/mc>' directories for CRAB job submission. \
+The following sections explain procedure for NanoAOD reprocessing for 2018 MC and data respectively.
+
 
 #### To submit crab jobs for 2018 MC signal (or background) samples:
 ```
