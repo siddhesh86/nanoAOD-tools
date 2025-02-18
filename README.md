@@ -150,6 +150,9 @@ ls
 Depending up on Year and data/mc for NanoAOD reprocessing, use the corresponding 'crab_haa4b_NanoAOD_<Year>_<data/mc>' directories for CRAB job submission. \
 The following sections explain procedure for NanoAOD reprocessing for 2018 MC and data respectively.
 
+Note: The first half of 2016 data is affected with APV (strip tracker pre-amplifier gain) issue. However, a single globle tag (GT) has to use for 2016 data, hence we have a single 'crab_haa4b_NanoAOD_2016_data' setup for 2016 data. 
+On the other hand, two GTs and hence two differet setupts ('crab_haa4b_NanoAOD_2016_mc' and 'crab_haa4b_NanoAOD_2016APV_mc') are used for 2016 MC.
+
 
 #### To submit crab jobs for 2018 MC signal (or background) samples:
 ```
