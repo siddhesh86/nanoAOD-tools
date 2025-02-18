@@ -53,9 +53,6 @@ echo "After python Hto4b_postproc.py PWD: " $PWD
 echo "After python Hto4b_postproc.py ls:"
 ls
 
-echo "After rm PNet_v1.root ls:"
-ls
-
 echo "crab_script.sh Done"
 
 fi
