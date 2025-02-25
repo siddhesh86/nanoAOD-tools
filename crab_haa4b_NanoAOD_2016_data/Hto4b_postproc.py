@@ -44,6 +44,8 @@ if not runLocally:
             r_ = re.search('Run(?P<DataYear>\d{4})(?P<RunPeriod>[a-zA-Z])', crabFiles[iFile])
             DataYear  = r_.group('DataYear')
             RunPeriod = r_.group('RunPeriod')
+            if 'HIPM' in crabFiles[iFile]:
+                DataYear += '_preVFP'
         else:
             # '/store/mc/RunIISummer20UL18MiniAODv2/'
             r_ = re.search('RunIISummer20UL(?P<DataYear>\d{2})MiniAOD', crabFiles[iFile])

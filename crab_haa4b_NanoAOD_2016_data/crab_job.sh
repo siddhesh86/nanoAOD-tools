@@ -23,13 +23,13 @@ declare -a datasets=()
 datasets+=(
     "/JetHT/Run2016B-ver1_HIPM_UL2016_MiniAODv2-v2/MINIAOD"
     "/JetHT/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016C-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016D-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016E-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016F-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016F-UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016G-UL2016_MiniAODv2-v2/MINIAOD"
-    "/JetHT/Run2016H-UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016C-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016D-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016E-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016F-HIPM_UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016F-UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016G-UL2016_MiniAODv2-v2/MINIAOD"
+    #"/JetHT/Run2016H-UL2016_MiniAODv2-v2/MINIAOD"
 ) 
 
 
@@ -79,12 +79,22 @@ do
     outputDatasetTag_ext=""
     # For data, used datasetNamePart1_datasetNamePart2 as datasetName_toUse
     if [[ ${testmystring} != *"SIM"* ]]; then
-        # ""/JetHT/Run2018A-UL2018_MiniAODv2_GT36-v1/MINIAOD""
+        # /JetHT/Run2016B-ver1_HIPM_UL2016_MiniAODv2-v2/MINIAOD
+        # /JetHT/Run2016B-ver2_HIPM_UL2016_MiniAODv2-v2/MINIAOD
+        # /JetHT/Run2016F-HIPM_UL2016_MiniAODv2-v2/MINIAOD
+        # /JetHT/Run2016F-UL2016_MiniAODv2-v2/MINIAOD
         IFS='-' read -r -a datasetNamePart2_subparts <<< "${datasetNamePart2}"
         datasetNamePart2_0=${datasetNamePart2_subparts[0]}
-        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2_0}"
-        #datasetName_toUse="${datasetNamePart1}_${datasetNamePart2}"
-        outputDatasetTag_ext="_${datasetNamePart2_0}"
+
+        # take substring before 'UL2016' from ${datasetNamePart2_subparts[0]}
+        IFS='UL' read -r -a datasetNamePart2_1_subparts <<< "${datasetNamePart2_subparts[1]}"
+        datasetNamePart2_1="_${datasetNamePart2_1_subparts[0]}"
+        if [[ ${datasetNamePart2_1} = *_ ]]; then   # drop tailing '_' character
+            datasetNamePart2_1=${datasetNamePart2_1::-1}            
+        fi
+
+        datasetName_toUse="${datasetNamePart1}_${datasetNamePart2_0}${datasetNamePart2_1}"
+        outputDatasetTag_ext="_${datasetNamePart2_0}${datasetNamePart2_1}"
     fi
 
     # Check if datasetNamePart2 contains 'ext1' strin, and if so, then update datasetName_toUse  

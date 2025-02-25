@@ -22,3 +22,7 @@ crab_haa4b_NanoAOD_2017_mc/crab/
 crab_haa4b_NanoAOD_2017_mc/crab_job_test.sh
 crab_haa4b_NanoAOD_2017_data/crab_job_JetHT.sh
 crab_haa4b_NanoAOD_2017_mc/crab_job_QCD.sh
+crab_haa4b_NanoAOD_2016APV_mc/crab/
+crab_haa4b_NanoAOD_2016_data/crab/
+crab_haa4b_NanoAOD_2016_mc/crab/
+crab_haa4b_NanoAOD_2017_mc/crab_job_TT_ZJets.sh
