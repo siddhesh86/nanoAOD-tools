@@ -33,12 +33,13 @@ config.Data.outputDatasetTag = 'r1'
 config.Data.publication = False
 
 config.Data.inputDBS = 'global'
-config.Data.splitting = 'EventAwareLumiBased' # 'Automatic' 'LumiBased' 'FileBased' 'EventAwareLumiBased'
-config.Data.unitsPerJob = 100000  ## For most samples, should be < 5 hours
-#config.Data.unitsPerJob = 10000  ## Perform a small test
+config.Data.splitting = 'FileBased' # 'Automatic' 'LumiBased' 'FileBased' 'EventAwareLumiBased'
+config.Data.unitsPerJob = 1 #100000  ## For most samples, should be < 5 hours
 #config.Data.totalUnits = 1 #100000  ## Perform a small test
-config.Site.storageSite = 'T2_CH_CERN' # Choose your site
 config.Data.outLFNDirBase = '/store/group/phys_susy/HToaaTo4b/NanoAOD/2016/MC/PNet_v2_2024_11_22/'
+
+config.Site.storageSite = 'T2_CH_CERN' # Choose your site
+config.Site.ignoreGlobalBlacklist = True
 
 ## QCD HT >=500: splitting = 'EventAwareLumiBased', unitsPerJob = 10000
 ## TTSemilep: splitting = 'EventAwareLumiBased', unitsPerJob = 50000
