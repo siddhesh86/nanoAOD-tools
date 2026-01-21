@@ -1,0 +1,659 @@
+
+AK8 jet pre-selection
+( pt >= 170 && abs(eta) <= 2.4 && groomedMass("SoftDropPuppi") >= 10)
+
+AK8 jet Haa4b candidate pre-selection (no PNet Haa4b cuts):
+(bDiscriminator("pfMassDecorrelatedParticleNetDiscriminatorsJetTags:XbbvsQCD") >=0.6)
+Updating process to run ParticleNet before it's included in MiniAOD
+
+*** Updating process to re-run ParticleNet before it's included in MiniAOD ***
+
+Will recalculate the following discriminators on AK8 jets: pfParticleNetMassRegressionJetTags:mass, pfParticleNetDiscriminatorsJetTags:WZvsQCD, pfMassDecorrelatedParticleNetDiscriminatorsJetTags:XbbvsQCD, pfPNetXto4bv1JetTags:probHaa4b, pfPNetXto4bv1JetTags:probHaa3b, pfPNetXto4bv1JetTags:probHaa2b, pfPNetXto4bv1JetTags:probHaa01b, pfPNetXto4bv1JetTags:probQCD4b, pfPNetXto4bv1JetTags:probQCD3b, pfPNetXto4bv1JetTags:probQCD2b, pfPNetXto4bv1JetTags:probQCD1b, pfPNetXto4bv1JetTags:probQCD0b, pfPNetXto4bv2aJetTags:probHaa4b, pfPNetXto4bv2aJetTags:probHaa3b, pfPNetXto4bv2aJetTags:probHaa2b, pfPNetXto4bv2aJetTags:probHaa01b, pfPNetXto4bv2aJetTags:probQCD4b, pfPNetXto4bv2aJetTags:probQCD3b, pfPNetXto4bv2aJetTags:probQCD2b2c, pfPNetXto4bv2aJetTags:probQCD2b, pfPNetXto4bv2aJetTags:probQCD1b, pfPNetXto4bv2aJetTags:probQCD0b, pfPNetXto4bv2aJetTags:probNR4b, pfPNetXto4bv2aJetTags:probNR3b, pfPNetXto4bv2aJetTags:probNR2b2c, pfPNetXto4bv2aJetTags:probNR2b, pfPNetXto4bv2aJetTags:probNR1b, pfPNetXto4bv2aJetTags:probNR0b, pfPNetXto4bv2aJetTags:probNRlep, pfPNetXto4bv2bJetTags:probHaa4b, pfPNetXto4bv2bJetTags:probHaa3b, pfPNetXto4bv2bJetTags:probHaa2b, pfPNetXto4bv2bJetTags:probHaa01b, pfPNetXto4bv2bJetTags:probQCD4b, pfPNetXto4bv2bJetTags:probQCD3b, pfPNetXto4bv2bJetTags:probQCD2b2c, pfPNetXto4bv2bJetTags:probQCD2b, pfPNetXto4bv2bJetTags:probQCD1b, pfPNetXto4bv2bJetTags:probQCD0b, pfPNetXto4bv2bJetTags:probNR4b, pfPNetXto4bv2bJetTags:probNR3b, pfPNetXto4bv2bJetTags:probNR2b2c, pfPNetXto4bv2bJetTags:probNR2b, pfPNetXto4bv2bJetTags:probNR1b, pfPNetXto4bv2bJetTags:probNR0b, pfPNetXto4bv2bJetTags:probNRlep, pfPNetTTtoHadJetTags:probQCD0b, pfPNetTTtoHadJetTags:probQCD1b, pfPNetTTtoHadJetTags:probQCD2c, pfPNetTTtoHadJetTags:probQCD2b, pfPNetTTtoHadJetTags:probX0b, pfPNetTTtoHadJetTags:probX1b, pfPNetTTtoHadJetTags:probX2c, pfPNetTTtoHadJetTags:probX2b, pfPNetTTtoHadJetTags:probX3q, pfPNetTTtoHadJetTags:probX4q, pfPNetTTtoHadJetTags:probT1b2q, pfPNetTTtoHadJetTags:probT1bb2q, pfPNetTTtoHadJetTags:probT1bbb2q, pfPNetTTtoHadJetTags:probT1b3q, pfPNetTTtoHadJetTags:probT2b1q, pfPNetTTtoHadJetTags:probT2b2q, pfPNetTTtoHadJetTags:probTTHad, pfPNetHto4bMassHv2bJetTags:outputHv2b, pfPNetHto4bMassAaJetTags:outputAa, pfPNetHto34bMassAaJetTags:outputAa, pfPNetHto34bMassAbJetTags:outputAb, pfPNetHto34bMassAdJetTags:outputAd, pfPNetHto4bMassA1JetTags:outputA1, pfPNetHto4bMassA2JetTags:outputA2, pfPNetHto4bMassAAJetTags:outputAA, pfPNetHto4bMassDiffAAJetTags:outputDiffAA, pfPNetHto4bMassDiffAARelHJetTags:outputDiffAARelH
+DEBUG 2025-02-03 20:31:25.292 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-02-03 20:31:25.292 UTC: 	 Running on: Linux lxplus9100.cern.ch 5.14.0-503.16.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Nov 21 07:26:21 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-02-03 20:31:25.292 UTC: 	 Using SINGULARITY image: el7:x86_64
+DEBUG 2025-02-03 20:31:25.292 UTC: 	 Operating System: CentOS Linux 7 (Core)
+DEBUG 2025-02-03 20:31:25.292 UTC: 	 Executing command: 'submit'
+DEBUG 2025-02-03 20:31:25.298 UTC: 	 Found CRAB cache file /afs/cern.ch/user/s/ssawant/.crab3
+INFO 2025-02-03 20:31:25.320 UTC: 	 Will use CRAB configuration file crab_config.py
+DEBUG 2025-02-03 20:31:25.320 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-02-03 20:31:25.441 UTC: 	 Overriden parameter Data.inputDataset with '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM'
+DEBUG 2025-02-03 20:31:25.441 UTC: 	 Overriden parameter General.requestName with 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8'
+DEBUG 2025-02-03 20:31:25.441 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2025-02-03 20:31:25.625 UTC: 	 Checking credentials
+DEBUG 2025-02-03 20:31:25.625 UTC: 	 Found proxy file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 20:31:25.625 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-02-03 20:31:25.625 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 20:31:25.653 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 20:31:25.654 UTC: 	 Getting proxy life time left
+DEBUG 2025-02-03 20:31:25.654 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 20:31:25.682 UTC: 	 output : 691170
+691170
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 20:31:25.682 UTC: 	 Proxy valid for 191:59:30 hours
+DEBUG 2025-02-03 20:31:25.683 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-02-03 20:31:25.737 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-02-03 20:31:25.737 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 20:31:25.766 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 20:31:25.766 UTC: 	 Getting myproxy life time left for 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-03 20:31:25.766 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-03 20:31:26.062 UTC: 	 output : username: 00e9b8c32ada56a80acf844b95bf396a489e4543
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 644:36:26  (26.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 20:31:26.062 UTC: 	 Myproxy is valid: 2320560
+DEBUG 2025-02-03 20:31:26.062 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 00e9b8c32ada56a80acf844b95bf396a489e4543  - validity: 26 days, 20:36:00
+DEBUG 2025-02-03 20:31:26.063 UTC: 	 Command use: submit
+DEBUG 2025-02-03 20:31:26.063 UTC: 	 Options use: ['-c', 'crab_config.py', 'Data.inputDataset=/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'General.requestName=SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8']
+DEBUG 2025-02-03 20:31:26.063 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 CRABClient version: v3.241125
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Instance is prod
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Command api workflow
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Started submission
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Working on /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-03 20:31:26.106 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 Loading required information from the environment
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 Found CMSSW_10_6_30 for slc7_amd64_gcc700 with base /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 Loading required information from the environment
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 Found CMSSW_10_6_30 for slc7_amd64_gcc700 with base /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 UNIQUE NAME: tarUUID c4e56887-0ffb-46cc-9a08-081b4c2276a9 
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab/r1'
+config.General.requestName = 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8'
+config.section_('JobType')
+config.JobType.outputFiles = ['PNet_v1_Skim.root']
+config.JobType.numCores = 4
+config.JobType.maxMemoryMB = 10000
+config.JobType.scriptExe = 'crab_script.sh'
+config.JobType.pluginName = 'Analysis'
+config.JobType.psetName = 'Nano_Hto4bPlus_2017MC_cfg.py'
+config.JobType.inputFiles = ['crab_script.sh', 'Hto4b_postproc.py']
+config.JobType.maxJobRuntimeMin = 1315
+config.section_('Data')
+config.Data.inputDataset = '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'r1'
+config.Data.publication = False
+config.Data.unitsPerJob = 100000
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2025-02-03 20:31:26.437 UTC: 	 self.config.JobType.psetName: Nano_Hto4bPlus_2017MC_cfg.py
+INFO 2025-02-03 20:31:26.437 UTC: 	 Importing CMSSW configuration Nano_Hto4bPlus_2017MC_cfg.py
+INFO 2025-02-03 20:31:41.843 UTC: 	 Finished importing CMSSW configuration Nano_Hto4bPlus_2017MC_cfg.py
+INFO 2025-02-03 20:31:41.843 UTC: 	 You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+DEBUG 2025-02-03 20:31:41.843 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/PSet.py
+DEBUG 2025-02-03 20:31:42.825 UTC: 	 The following EDM output files will be collected: ['PNet_v1.root']
+DEBUG 2025-02-03 20:31:42.825 UTC: 	 The following TFile output files will be collected: []
+WARNING 2025-02-03 20:31:42.825 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 'PNet_v1_Skim.root'
+DEBUG 2025-02-03 20:31:42.826 UTC: 	 Loading required information from the environment
+DEBUG 2025-02-03 20:31:42.826 UTC: 	 Found CMSSW_10_6_30 for slc7_amd64_gcc700 with base /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30
+DEBUG 2025-02-03 20:31:42.826 UTC: 	 Making tarball in /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/c4e56887-0ffb-46cc-9a08-081b4c2276a9default.tgz
+DEBUG 2025-02-03 20:31:42.827 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/bin
+DEBUG 2025-02-03 20:31:42.827 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/bin to tarball
+DEBUG 2025-02-03 20:31:43.268 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/python
+DEBUG 2025-02-03 20:31:43.268 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/python to tarball
+DEBUG 2025-02-03 20:32:01.943 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/cfipython
+DEBUG 2025-02-03 20:32:01.944 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/cfipython to tarball
+DEBUG 2025-02-03 20:32:04.620 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/lib
+DEBUG 2025-02-03 20:32:04.620 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/lib to tarball
+DEBUG 2025-02-03 20:32:12.331 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/biglib
+DEBUG 2025-02-03 20:32:12.331 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/biglib to tarball
+DEBUG 2025-02-03 20:32:12.410 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/module
+DEBUG 2025-02-03 20:32:12.432 UTC: 	 Checking directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/config/SCRAM/hooks
+DEBUG 2025-02-03 20:32:12.471 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/config/SCRAM/hooks to tarball
+DEBUG 2025-02-03 20:32:18.461 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/RecoBTag/Combined/interface to tarball
+DEBUG 2025-02-03 20:32:18.485 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/RecoBTag/Combined/python to tarball
+DEBUG 2025-02-03 20:32:18.543 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/RecoBTag/Combined/data to tarball
+DEBUG 2025-02-03 20:32:38.562 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/RecoBTag/ONNXRuntime/interface to tarball
+DEBUG 2025-02-03 20:32:38.649 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/RecoBTag/ONNXRuntime/python to tarball
+DEBUG 2025-02-03 20:32:38.757 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2025-02-03 20:32:38.850 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAOD/python to tarball
+DEBUG 2025-02-03 20:32:39.090 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/PatAlgos/interface to tarball
+DEBUG 2025-02-03 20:32:39.230 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/PatAlgos/python to tarball
+DEBUG 2025-02-03 20:32:40.175 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/PFNano/interface to tarball
+DEBUG 2025-02-03 20:32:40.295 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/PFNano/python to tarball
+DEBUG 2025-02-03 20:32:41.321 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/data to tarball
+DEBUG 2025-02-03 20:32:50.085 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/interface to tarball
+DEBUG 2025-02-03 20:32:50.305 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/python to tarball
+DEBUG 2025-02-03 20:32:50.430 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/python/postprocessing/data to tarball
+DEBUG 2025-02-03 20:32:50.520 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/DataFormats/PatCandidates/interface to tarball
+DEBUG 2025-02-03 20:32:51.031 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/CommonTools/RecoAlgos/interface to tarball
+DEBUG 2025-02-03 20:32:52.234 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/CommonTools/RecoAlgos/python to tarball
+DEBUG 2025-02-03 20:32:52.273 UTC: 	 Adding directory /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/SimDataFormats/JetMatching/interface to tarball
+DEBUG 2025-02-03 20:32:52.502 UTC: 	 Adding file crab_script.sh to tarball
+DEBUG 2025-02-03 20:32:52.505 UTC: 	 Adding file Hto4b_postproc.py to tarball
+DEBUG 2025-02-03 20:32:53.278 UTC: 	 Uploading archive /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/c4e56887-0ffb-46cc-9a08-081b4c2276a9default.tgz (94 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2025-02-03 20:33:06.311 UTC: 	 Encoded data for curl request: tarballname=83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2025-02-03 20:33:06.502 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=ssawant/sandboxes/83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjUtMDItMDNUMjE6MzM6MDZaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAic3Nhd2FudC9zYW5kYm94ZXMvODNjNDE4OWFkOGQ3YTc1MTY2NDk0ODY0MDk5YTVmMjdiYjg1MjVlYzEzZDM4MzQ5MGU5ZWQ0ODA3NGQwMTBhOS50YXIuZ3oifV19" -F "signature=zIY7vC47A37GhU5t4w3ec1KyUYA=" -F "file=@/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/c4e56887-0ffb-46cc-9a08-081b4c2276a9default.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2025-02-03 20:33:08.903 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2025-02-03 20:33:08.903 UTC: 	 upload to S3 of sandbox /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/c4e56887-0ffb-46cc-9a08-081b4c2276a9default.tgz completed
+DEBUG 2025-02-03 20:33:08.903 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2025-02-03 20:33:09.904 UTC: 	 Encoded data for curl request: tarballname=83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz&subresource=download&clientmethod=head_object&objecttype=sandbox
+DEBUG 2025-02-03 20:33:09.949 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2025-02-03 20:33:09.953 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/ssawant/sandboxes/83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=A4IKT3Fehe7HIQC05n8ULfAPK9Q%3D&Expires=1738618389"
+DEBUG 2025-02-03 20:33:09.979 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2025-02-03 20:33:09.979 UTC: 	 sandbox /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/c4e56887-0ffb-46cc-9a08-081b4c2276a9default.tgz successfully uploaded to S3
+DEBUG 2025-02-03 20:33:09.979 UTC: 	 Loading required information from the environment
+DEBUG 2025-02-03 20:33:09.979 UTC: 	 Found CMSSW_10_6_30 for slc7_amd64_gcc700 with base /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30
+DEBUG 2025-02-03 20:33:09.979 UTC: 	 Making tarball in /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/debugFiles.tgz
+DEBUG 2025-02-03 20:33:09.983 UTC: 	 Uploading archive /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/debugFiles.tgz (3 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2025-02-03 20:33:09.985 UTC: 	 Encoded data for curl request: tarballname=49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2025-02-03 20:33:10.271 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=ssawant/sandboxes/49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjUtMDItMDNUMjE6MzM6MTBaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAic3Nhd2FudC9zYW5kYm94ZXMvNDlhNTJiYzJiMDdhNTg2NzI1ZjExOWQ1OTE5YmVhNzBkMTc3M2MyYjdlMWE2ZmJlYmNjMGZlMDBlZDVlZjBhZi50YXIuZ3oifV19" -F "signature=rjF8tnqETe4AJskwhAfUrIob5RM=" -F "file=@/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2025-02-03 20:33:11.378 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2025-02-03 20:33:11.379 UTC: 	 upload to S3 of sandbox /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/debugFiles.tgz completed
+DEBUG 2025-02-03 20:33:11.379 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2025-02-03 20:33:12.380 UTC: 	 Encoded data for curl request: tarballname=49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz&subresource=download&clientmethod=head_object&objecttype=sandbox
+DEBUG 2025-02-03 20:33:12.428 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2025-02-03 20:33:12.433 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/ssawant/sandboxes/49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=oQHlwMQdgx4CZ3lUt3JVpNcRzDc%3D&Expires=1738618392"
+DEBUG 2025-02-03 20:33:12.466 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2025-02-03 20:33:12.466 UTC: 	 sandbox /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/inputs/debugFiles.tgz successfully uploaded to S3
+DEBUG 2025-02-03 20:33:12.467 UTC: 	 Result uploading input files: 83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz 
+DEBUG 2025-02-03 20:33:12.468 UTC: 	 submit() - self.configuration from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab/r1'
+config.General.requestName = 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8'
+config.section_('JobType')
+config.JobType.outputFiles = ['PNet_v1_Skim.root']
+config.JobType.numCores = 4
+config.JobType.maxMemoryMB = 10000
+config.JobType.scriptExe = 'crab_script.sh'
+config.JobType.pluginName = 'Analysis'
+config.JobType.psetName = 'Nano_Hto4bPlus_2017MC_cfg.py'
+config.JobType.inputFiles = ['crab_script.sh', 'Hto4b_postproc.py']
+config.JobType.maxJobRuntimeMin = 1315
+config.section_('Data')
+config.Data.inputDataset = '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'r1'
+config.Data.publication = False
+config.Data.unitsPerJob = 100000
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2025-02-03 20:33:12.468 UTC: 	 submit() - self.configreq {'maxjobruntime': 1315, 'extrajdl': [], 'lfn': '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'savelogsflag': 1, 'useparent': 0, 'scriptexe': 'crab_script.sh', 'inputblocks': [], 'asyncdest': 'T2_CH_CERN', 'algoargs': 100000, 'numcores': 4, 'addoutputfiles': ['PNet_v1_Skim.root'], 'generator': 'pythia', 'maxmemory': 10000, 'partialdataset': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'userfiles': [], 'inputdata': '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'ignorelocality': 0, 'dryrun': 0, 'workflow': 'crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'nonprodsw': 0, 'oneEventMode': 0, 'saveoutput': 1, 'publication': 0, 'totalunits': 0, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'jobtype': 'Analysis', 'requireaccelerator': 0, 'publishname2': 'r1'}
+DEBUG 2025-02-03 20:33:12.468 UTC: 	 submit() - jobconfig {'cachefilename': '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'jobarch': 'slc7_amd64_gcc700', 'addoutputfiles': ['PNet_v1_Skim.root'], 'cacheurl': u'https://cmsweb.cern.ch/S3/crabcache_prod', 'jobsw': 'CMSSW_10_6_30', 'tfileoutfiles': [], 'debugfilename': '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', 'inputdata': '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'jobtype': 'Analysis', 'edmoutfiles': ['PNet_v1.root']}
+INFO 2025-02-03 20:33:12.468 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2025-02-03 20:33:12.469 UTC: 	 Submitting {'maxjobruntime': 1315, 'extrajdl': [], 'lfn': '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'savelogsflag': 1, 'useparent': 0, 'scriptexe': 'crab_script.sh', 'inputblocks': [], 'asyncdest': 'T2_CH_CERN', 'algoargs': 100000, 'cachefilename': '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'numcores': 4, 'addoutputfiles': ['PNet_v1_Skim.root'], 'generator': 'pythia', 'maxmemory': 10000, 'partialdataset': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_6_30', 'edmoutfiles': ['PNet_v1.root'], 'userfiles': [], 'inputdata': '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'ignorelocality': 0, 'dryrun': 0, 'workflow': 'crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'cacheurl': u'https://cmsweb.cern.ch/S3/crabcache_prod', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'jobtype': 'Analysis', 'requireaccelerator': 0, 'publishname2': 'r1'} 
+DEBUG 2025-02-03 20:33:12.470 UTC: 	 Encoded data for curl request: maxjobruntime=1315&lfn=%2Fstore%2Fgroup%2Fphys_susy%2FHToaaTo4b%2FNanoAOD%2F2017%2FMC%2FPNet_v2_2024_11_22%2F&savelogsflag=1&useparent=0&scriptexe=crab_script.sh&asyncdest=T2_CH_CERN&algoargs=100000&cachefilename=83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz&numcores=4&generator=pythia&maxmemory=10000&partialdataset=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_6_30&inputdata=%2FSUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8%2FRunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1%2FMINIAODSIM&ignorelocality=0&dryrun=0&workflow=crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2FS3%2Fcrabcache_prod&nonprodsw=0&oneEventMode=0&debugfilename=49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz&saveoutput=1&publication=0&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=EventAwareLumiBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&jobtype=Analysis&requireaccelerator=0&publishname2=r1&addoutputfiles=PNet_v1_Skim.root&edmoutfiles=PNet_v1.root
+DEBUG 2025-02-03 20:33:12.545 UTC: 	 Result: {u'result': [{u'RequestName': u'250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8'}]}
+INFO 2025-02-03 20:33:12.551 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2025-02-03 20:33:12.551 UTC: 	 Task name: 250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-03 20:33:12.551 UTC: 	 Project dir: crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-03 20:33:12.551 UTC: 	 Please use ' crab status -d crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8 ' to check how the submission process proceeds.
+DEBUG 2025-02-03 20:33:12.551 UTC: 	 About to return
+INFO 2025-02-03 20:33:12.554 UTC: 	 Log file is /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/crab.log
+DEBUG 2025-02-03 22:54:42.789 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-02-03 22:54:42.789 UTC: 	 Running on: Linux lxplus9100.cern.ch 5.14.0-503.16.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Nov 21 07:26:21 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-02-03 22:54:42.789 UTC: 	 Using SINGULARITY image: el7:x86_64
+DEBUG 2025-02-03 22:54:42.789 UTC: 	 Operating System: CentOS Linux 7 (Core)
+DEBUG 2025-02-03 22:54:42.789 UTC: 	 Executing command: 'status'
+DEBUG 2025-02-03 22:54:42.790 UTC: 	 Found CRAB cache file /afs/cern.ch/user/s/ssawant/.crab3
+DEBUG 2025-02-03 22:54:42.838 UTC: 	 Checking credentials
+DEBUG 2025-02-03 22:54:42.838 UTC: 	 Found proxy file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 22:54:42.839 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-02-03 22:54:42.839 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 22:54:42.868 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 22:54:42.868 UTC: 	 Getting proxy life time left
+DEBUG 2025-02-03 22:54:42.868 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 22:54:42.893 UTC: 	 output : 682573
+682573
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 22:54:42.893 UTC: 	 Proxy valid for 189:36:13 hours
+DEBUG 2025-02-03 22:54:42.894 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-02-03 22:54:42.940 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-02-03 22:54:42.940 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-03 22:54:42.973 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 22:54:42.973 UTC: 	 Getting myproxy life time left for 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-03 22:54:42.973 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-03 22:54:43.279 UTC: 	 output : username: 00e9b8c32ada56a80acf844b95bf396a489e4543
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 642:13:09  (26.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 22:54:43.279 UTC: 	 Myproxy is valid: 2311980
+DEBUG 2025-02-03 22:54:43.279 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 00e9b8c32ada56a80acf844b95bf396a489e4543  - validity: 26 days, 18:13:00
+DEBUG 2025-02-03 22:54:43.279 UTC: 	 Retrieving username ...
+DEBUG 2025-02-03 22:54:43.279 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-02-03 22:54:43.900 UTC: 	 username is ssawant
+INFO 2025-02-03 22:54:44.744 UTC: 	 Rucio client intialized for account ssawant
+DEBUG 2025-02-03 22:54:44.744 UTC: 	 Command use: status
+DEBUG 2025-02-03 22:54:44.744 UTC: 	 Options use: ['-d', 'crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8']
+DEBUG 2025-02-03 22:54:44.745 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-02-03 22:54:44.791 UTC: 	 CRABClient version: v3.241125
+DEBUG 2025-02-03 22:54:44.791 UTC: 	 Instance is prod
+DEBUG 2025-02-03 22:54:44.791 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-02-03 22:54:44.791 UTC: 	 Command api workflow
+DEBUG 2025-02-03 22:54:44.791 UTC: 	 Encoded data for curl request: subresource=search&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-03 22:54:44.847 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch']}, 'result': ['250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', 'SUBMITTED', 'SUBMIT', '2025-02-03 20:33:12.537507', 'None', '2025-02-03 20:34:17.963323', 'None', 'CMSSW_10_6_30', 'slc7_amd64_gcc700', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'F', '0', '[]', '[]', 'EventAwareLumiBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'events_per_job': 100000, 'runs': [], 'lumis': []}", '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'ssawant', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant', 'cms', 'None', 'None', 'r1-00000000000000000000000000000000', 'F', 'T2_CH_CERN', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', "['PNet_v1_Skim.root']", '[]', "['PNet_v1.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1315', '4', '10000', '10', "['/FakeDataset/fakefile-FakePublish-d538ae35f75d102daa42615f1b83f0fd/USER']", '["Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.\\n List is (first 5 elements only): [\'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41\', \'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f\', \'...\']\\n\\nGlobal blacklist contain these T1/T2: [\'T2_CH_CERN_HLT\', \'T2_PL_Cyfronet\', \'T2_RU_ITEP\', \'T2_IT_Rome\', \'T2_RU_INR\', \'T2_US_Florida\', \'T2_TR_METU\', \'T2_PK_NCP\', \'T2_US_MIT\', \'T2_LB_HPC4L\', \'T2_RU_IHEP\', \'T2_CH_CERN_P5\', \'T2_GR_Ioannina\', \'T2_EE_Estonia\', \'T2_LV_HPCNET\', \'T2_UK_SGrid_Bristol\', \'T2_IN_TIFR\'] and 38 T3\'s\\n Full list at https\\n[... message truncated to the first 1000 chars ...]"]', 'http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'crab_script.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0197.cern.ch', 'F', '[]', 'T', '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'F', 'None', 'F', 'None', 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', '116164967', 'F', '188.185.89.194', '0.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None', 'None']}
+INFO 2025-02-03 22:54:44.848 UTC: 	 CRAB project directory:		/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-03 22:54:44.848 UTC: 	 Task name:			250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-03 22:54:44.848 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0197.cern.ch - crab-prod-tw01
+INFO 2025-02-03 22:54:44.848 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-02-03 22:54:44.848 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-03 22:54:44.853 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ssawant&var-task=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8&from=1738611192000&to=now
+WARNING 2025-02-03 22:54:44.854 UTC: 	 Warning:			Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.
+				 List is (first 5 elements only): ['/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f', '...']
+				
+				Global blacklist contain these T1/T2: ['T2_CH_CERN_HLT', 'T2_PL_Cyfronet', 'T2_RU_ITEP', 'T2_IT_Rome', 'T2_RU_INR', 'T2_US_Florida', 'T2_TR_METU', 'T2_PK_NCP', 'T2_US_MIT', 'T2_LB_HPC4L', 'T2_RU_IHEP', 'T2_CH_CERN_P5', 'T2_GR_Ioannina', 'T2_EE_Estonia', 'T2_LV_HPCNET', 'T2_UK_SGrid_Bristol', 'T2_IN_TIFR'] and 38 T3's
+				 Full list at https
+				[... message truncated to the first 1000 chars ...]
+DEBUG 2025-02-03 22:54:44.854 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 116164967)
+DEBUG 2025-02-03 22:54:44.854 UTC: 	 Webdir is located at http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-03 22:54:44.855 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-03 22:54:44.902 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-03 22:54:44.902 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl
+DEBUG 2025-02-03 22:54:44.902 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-oj0s4enl.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-03 22:54:44.902 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-oj0s4enl.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-03 22:54:44.946 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2025-02-03 22:54:44.946 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2025-02-03 22:54:44.946 UTC: 	 Got information from status cache file: {'2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1738614928.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['116164971.0'], 'State': 'idle', 'RecordedSite': False}, '6': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_DESY', 'T2_DE_DESY'], 'ResidentSetSize': [3182740], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618728.0], 'EndTimes': [1738620057.0], 'TotalUserCpuTimeHistory': [3947], 'TotalSysCpuTimeHistory': [43], 'WallDurations': [9.0, 164.23941469192505, 1329.0], 'JobIds': ['116164972.0'], 'State': 'finished', 'RecordedSite': True}, '11': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1738614928.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['116164973.0'], 'State': 'idle', 'RecordedSite': False}, '8': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_RWTH', 'T2_DE_RWTH'], 'ResidentSetSize': [3284668], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616475.0], 'EndTimes': [1738618188.0], 'TotalUserCpuTimeHistory': [5900], 'TotalSysCpuTimeHistory': [56], 'WallDurations': [8.0, 14.306034088134766, 1713.0], 'JobIds': ['116164974.0'], 'State': 'finished', 'RecordedSite': True}, '10': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1738614928.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['116164975.0'], 'State': 'idle', 'RecordedSite': False}, '7': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1738614928.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['116164976.0'], 'State': 'idle', 'RecordedSite': False}, '5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1738614928.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['116164977.0'], 'State': 'idle', 'RecordedSite': False}, '9': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2937408], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616826.0], 'EndTimes': [1738618918.0], 'TotalUserCpuTimeHistory': [6984], 'TotalSysCpuTimeHistory': [97], 'WallDurations': [9.0, 263.5994119644165, 2092.0], 'JobIds': ['116164978.0'], 'State': 'finished', 'RecordedSite': True}, '3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Florida', 'T2_US_Florida'], 'ResidentSetSize': [2967012], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618090.0], 'EndTimes': [1738619185.0], 'TotalUserCpuTimeHistory': [3808], 'TotalSysCpuTimeHistory': [24], 'WallDurations': [9.0, 200.13722109794617, 1095.0], 'JobIds': ['116164979.0'], 'State': 'finished', 'RecordedSite': True}, '1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2919924], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618085.0], 'EndTimes': [1738621563.0], 'TotalUserCpuTimeHistory': [12547], 'TotalSysCpuTimeHistory': [125], 'WallDurations': [9.0, 205.13722109794617, 3478.0], 'JobIds': ['116164980.0'], 'State': 'transferring', 'RecordedSite': True}, '4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [3061252], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618087.0], 'EndTimes': [1738622144.0], 'TotalUserCpuTimeHistory': [14659], 'TotalSysCpuTimeHistory': [136], 'WallDurations': [8.0, 203.13722109794617, 4057.0], 'JobIds': ['116164981.0'], 'State': 'transferring', 'RecordedSite': True}}
+INFO 2025-02-03 22:54:44.946 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2025-02-03 22:54:44.946 UTC: 	 
+Jobs status:                    finished     		 36.4% ( 4/11)
+INFO 2025-02-03 22:54:44.947 UTC: 	 				idle         		 45.5% ( 5/11)
+INFO 2025-02-03 22:54:44.947 UTC: 	 				transferring 		 18.2% ( 2/11)
+INFO 2025-02-03 22:54:44.947 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2025-02-03 22:54:44.947 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (10000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-03 22:54:44.948 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1315 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-03 22:54:44.948 UTC: 	 
+Summary of run jobs:
+ * Memory: 0MB min, 3207MB max, 2987MB ave
+ * Runtime: 0:00:00 min, 1:07:37 max, 0:38:14 ave
+ * CPU eff: 75% min, 91% max, 88% ave
+ * Waste: 0:18:22 (7% of total)
+
+INFO 2025-02-03 22:54:44.966 UTC: 	 Log file is /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/crab.log
+DEBUG 2025-02-04 11:18:35.863 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-02-04 11:18:35.863 UTC: 	 Running on: Linux lxplus9100.cern.ch 5.14.0-503.16.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Nov 21 07:26:21 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-02-04 11:18:35.863 UTC: 	 Using SINGULARITY image: el7:x86_64
+DEBUG 2025-02-04 11:18:35.863 UTC: 	 Operating System: CentOS Linux 7 (Core)
+DEBUG 2025-02-04 11:18:35.863 UTC: 	 Executing command: 'status'
+DEBUG 2025-02-04 11:18:35.875 UTC: 	 Found CRAB cache file /afs/cern.ch/user/s/ssawant/.crab3
+DEBUG 2025-02-04 11:18:36.078 UTC: 	 Checking credentials
+DEBUG 2025-02-04 11:18:36.079 UTC: 	 Found proxy file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 11:18:36.079 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-02-04 11:18:36.079 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 11:18:36.154 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 11:18:36.155 UTC: 	 Getting proxy life time left
+DEBUG 2025-02-04 11:18:36.155 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 11:18:36.189 UTC: 	 output : 637939
+637939
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 11:18:36.189 UTC: 	 Proxy valid for 177:12:19 hours
+DEBUG 2025-02-04 11:18:36.190 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-02-04 11:18:36.236 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-02-04 11:18:36.236 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 11:18:36.275 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 11:18:36.275 UTC: 	 Getting myproxy life time left for 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-04 11:18:36.275 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-04 11:18:36.570 UTC: 	 output : username: 00e9b8c32ada56a80acf844b95bf396a489e4543
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 629:49:16  (26.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 11:18:36.570 UTC: 	 Myproxy is valid: 2267340
+DEBUG 2025-02-04 11:18:36.570 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 00e9b8c32ada56a80acf844b95bf396a489e4543  - validity: 26 days, 5:49:00
+DEBUG 2025-02-04 11:18:36.570 UTC: 	 Retrieving username ...
+DEBUG 2025-02-04 11:18:36.570 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-02-04 11:18:37.345 UTC: 	 username is ssawant
+INFO 2025-02-04 11:18:37.773 UTC: 	 Rucio client intialized for account ssawant
+DEBUG 2025-02-04 11:18:37.774 UTC: 	 Command use: status
+DEBUG 2025-02-04 11:18:37.774 UTC: 	 Options use: ['-d', 'crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8']
+DEBUG 2025-02-04 11:18:37.774 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-02-04 11:18:37.820 UTC: 	 CRABClient version: v3.241125
+DEBUG 2025-02-04 11:18:37.821 UTC: 	 Instance is prod
+DEBUG 2025-02-04 11:18:37.821 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-02-04 11:18:37.821 UTC: 	 Command api workflow
+DEBUG 2025-02-04 11:18:37.821 UTC: 	 Encoded data for curl request: subresource=search&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 11:18:37.879 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch']}, 'result': ['250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', 'SUBMITTED', 'SUBMIT', '2025-02-03 20:33:12.537507', 'None', '2025-02-03 20:34:17.963323', 'None', 'CMSSW_10_6_30', 'slc7_amd64_gcc700', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'F', '0', '[]', '[]', 'EventAwareLumiBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'events_per_job': 100000, 'runs': [], 'lumis': []}", '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'ssawant', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant', 'cms', 'None', 'None', 'r1-00000000000000000000000000000000', 'F', 'T2_CH_CERN', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', "['PNet_v1_Skim.root']", '[]', "['PNet_v1.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1315', '4', '10000', '10', "['/FakeDataset/fakefile-FakePublish-d538ae35f75d102daa42615f1b83f0fd/USER']", '["Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.\\n List is (first 5 elements only): [\'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41\', \'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f\', \'...\']\\n\\nGlobal blacklist contain these T1/T2: [\'T2_CH_CERN_HLT\', \'T2_PL_Cyfronet\', \'T2_RU_ITEP\', \'T2_IT_Rome\', \'T2_RU_INR\', \'T2_US_Florida\', \'T2_TR_METU\', \'T2_PK_NCP\', \'T2_US_MIT\', \'T2_LB_HPC4L\', \'T2_RU_IHEP\', \'T2_CH_CERN_P5\', \'T2_GR_Ioannina\', \'T2_EE_Estonia\', \'T2_LV_HPCNET\', \'T2_UK_SGrid_Bristol\', \'T2_IN_TIFR\'] and 38 T3\'s\\n Full list at https\\n[... message truncated to the first 1000 chars ...]"]', 'http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'crab_script.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0197.cern.ch', 'F', '[]', 'T', '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'F', 'None', 'F', 'None', 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', '116164967', 'F', '188.185.89.194', '0.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None', 'None']}
+INFO 2025-02-04 11:18:37.880 UTC: 	 CRAB project directory:		/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 11:18:37.880 UTC: 	 Task name:			250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 11:18:37.881 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0197.cern.ch - crab-prod-tw01
+INFO 2025-02-04 11:18:37.881 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-02-04 11:18:37.881 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 11:18:37.889 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ssawant&var-task=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8&from=1738611192000&to=now
+WARNING 2025-02-04 11:18:37.890 UTC: 	 Warning:			Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.
+				 List is (first 5 elements only): ['/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f', '...']
+				
+				Global blacklist contain these T1/T2: ['T2_CH_CERN_HLT', 'T2_PL_Cyfronet', 'T2_RU_ITEP', 'T2_IT_Rome', 'T2_RU_INR', 'T2_US_Florida', 'T2_TR_METU', 'T2_PK_NCP', 'T2_US_MIT', 'T2_LB_HPC4L', 'T2_RU_IHEP', 'T2_CH_CERN_P5', 'T2_GR_Ioannina', 'T2_EE_Estonia', 'T2_LV_HPCNET', 'T2_UK_SGrid_Bristol', 'T2_IN_TIFR'] and 38 T3's
+				 Full list at https
+				[... message truncated to the first 1000 chars ...]
+DEBUG 2025-02-04 11:18:37.892 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 116164967)
+DEBUG 2025-02-04 11:18:37.892 UTC: 	 Webdir is located at http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 11:18:37.892 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 11:18:37.940 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 11:18:37.940 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl
+DEBUG 2025-02-04 11:18:37.940 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-41xa87qc.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-04 11:18:37.940 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-41xa87qc.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-04 11:18:37.982 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 11:18:37.983 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2025-02-04 11:18:37.983 UTC: 	 Got information from status cache file: {'2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt', 'T2_US_Vanderbilt'], 'ResidentSetSize': [3179348], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738661560.0], 'EndTimes': [1738662575.0], 'TotalUserCpuTimeHistory': [3013], 'TotalSysCpuTimeHistory': [19], 'WallDurations': [9.0, 37.370529890060425, 1015.0], 'JobIds': ['116164971.0'], 'State': 'finished', 'RecordedSite': True}, '6': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_DESY', 'T2_DE_DESY'], 'ResidentSetSize': [3182740], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618728.0], 'EndTimes': [1738620057.0], 'TotalUserCpuTimeHistory': [3947], 'TotalSysCpuTimeHistory': [43], 'WallDurations': [9.0, 164.23941469192505, 1329.0], 'JobIds': ['116164972.0'], 'State': 'finished', 'RecordedSite': True}, '11': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_US_FNAL', 'T1_US_FNAL'], 'ResidentSetSize': [3269816], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624990.0], 'EndTimes': [1738627045.0], 'TotalUserCpuTimeHistory': [6032], 'TotalSysCpuTimeHistory': [73], 'WallDurations': [9.0, 219.89639496803284, 2055.0], 'JobIds': ['116164973.0'], 'State': 'finished', 'RecordedSite': True}, '8': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_RWTH', 'T2_DE_RWTH'], 'ResidentSetSize': [3284668], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616475.0], 'EndTimes': [1738618188.0], 'TotalUserCpuTimeHistory': [5900], 'TotalSysCpuTimeHistory': [56], 'WallDurations': [8.0, 14.306034088134766, 1713.0], 'JobIds': ['116164974.0'], 'State': 'finished', 'RecordedSite': True}, '10': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_US_FNAL', 'T1_US_FNAL'], 'ResidentSetSize': [3930892], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624992.0], 'EndTimes': [1738636004.0], 'TotalUserCpuTimeHistory': [38646], 'TotalSysCpuTimeHistory': [390], 'WallDurations': [9.0, 217.89639496803284, 11012.0], 'JobIds': ['116164975.0'], 'State': 'finished', 'RecordedSite': True}, '7': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_RU_JINR', 'T1_RU_JINR'], 'ResidentSetSize': [2823852], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624989.0], 'EndTimes': [1738626476.0], 'TotalUserCpuTimeHistory': [4645], 'TotalSysCpuTimeHistory': [37], 'WallDurations': [9.0, 220.89639496803284, 1487.0], 'JobIds': ['116164976.0'], 'State': 'finished', 'RecordedSite': True}, '5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_ES_CIEMAT', 'T2_ES_CIEMAT'], 'ResidentSetSize': [3135656], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738623975.0], 'EndTimes': [1738624559.0], 'TotalUserCpuTimeHistory': [1696], 'TotalSysCpuTimeHistory': [12], 'WallDurations': [9.0, 31.802898406982422, 584.0], 'JobIds': ['116164977.0'], 'State': 'finished', 'RecordedSite': True}, '9': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2937408], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616826.0], 'EndTimes': [1738618918.0], 'TotalUserCpuTimeHistory': [6984], 'TotalSysCpuTimeHistory': [97], 'WallDurations': [9.0, 263.5994119644165, 2092.0], 'JobIds': ['116164978.0'], 'State': 'finished', 'RecordedSite': True}, '3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Florida', 'T2_US_Florida'], 'ResidentSetSize': [2967012], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618090.0], 'EndTimes': [1738619185.0], 'TotalUserCpuTimeHistory': [3808], 'TotalSysCpuTimeHistory': [24], 'WallDurations': [9.0, 200.13722109794617, 1095.0], 'JobIds': ['116164979.0'], 'State': 'finished', 'RecordedSite': True}, '1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2919924], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618085.0], 'EndTimes': [1738621563.0], 'TotalUserCpuTimeHistory': [12547], 'TotalSysCpuTimeHistory': [125], 'WallDurations': [9.0, 205.13722109794617, 3478.0], 'JobIds': ['116164980.0'], 'State': 'finished', 'RecordedSite': True}, '4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [3061252], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618087.0], 'EndTimes': [1738622144.0], 'TotalUserCpuTimeHistory': [14659], 'TotalSysCpuTimeHistory': [136], 'WallDurations': [8.0, 203.13722109794617, 4057.0], 'JobIds': ['116164981.0'], 'State': 'finished', 'RecordedSite': True}}
+INFO 2025-02-04 11:18:37.983 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2025-02-04 11:18:37.984 UTC: 	 
+Jobs status:                    finished     		100.0% (11/11)
+INFO 2025-02-04 11:18:37.984 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2025-02-04 11:18:37.985 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (10000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-04 11:18:37.989 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1315 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-04 11:18:37.990 UTC: 	 
+Summary of run jobs:
+ * Memory: 3193MB min, 3838MB max, 3080MB ave
+ * Runtime: 0:09:44 min, 3:03:32 max, 0:45:19 ave
+ * CPU eff: 73% min, 91% max, 86% ave
+ * Waste: 0:31:15 (6% of total)
+
+INFO 2025-02-04 11:18:38.107 UTC: 	 Log file is /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/crab.log
+DEBUG 2025-02-04 13:00:28.329 UTC: 	 CRAB Client version: v3.241125
+DEBUG 2025-02-04 13:00:28.330 UTC: 	 Running on: Linux lxplus9100.cern.ch 5.14.0-503.16.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Nov 21 07:26:21 EST 2024 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-02-04 13:00:28.330 UTC: 	 Using SINGULARITY image: el7:x86_64
+DEBUG 2025-02-04 13:00:28.330 UTC: 	 Operating System: CentOS Linux 7 (Core)
+DEBUG 2025-02-04 13:00:28.330 UTC: 	 Executing command: 'status'
+DEBUG 2025-02-04 13:00:28.331 UTC: 	 Found CRAB cache file /afs/cern.ch/user/s/ssawant/.crab3
+DEBUG 2025-02-04 13:00:28.348 UTC: 	 Checking credentials
+DEBUG 2025-02-04 13:00:28.348 UTC: 	 Found proxy file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 13:00:28.348 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-02-04 13:00:28.348 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 13:00:28.400 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 13:00:28.400 UTC: 	 Getting proxy life time left
+DEBUG 2025-02-04 13:00:28.400 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 13:00:28.433 UTC: 	 output : 687798
+687798
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 13:00:28.433 UTC: 	 Proxy valid for 191:03:18 hours
+DEBUG 2025-02-04 13:00:28.434 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-02-04 13:00:28.500 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-02-04 13:00:28.500 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-02-04 13:00:28.549 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 13:00:28.550 UTC: 	 Getting myproxy life time left for 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-04 13:00:28.551 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-02-04 13:00:28.872 UTC: 	 output : username: 00e9b8c32ada56a80acf844b95bf396a489e4543
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 628:07:24  (26.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 13:00:28.872 UTC: 	 Myproxy is valid: 2261220
+DEBUG 2025-02-04 13:00:28.872 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 00e9b8c32ada56a80acf844b95bf396a489e4543  - validity: 26 days, 4:07:00
+DEBUG 2025-02-04 13:00:28.872 UTC: 	 Retrieving username ...
+DEBUG 2025-02-04 13:00:28.872 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-02-04 13:00:29.548 UTC: 	 username is ssawant
+INFO 2025-02-04 13:00:30.516 UTC: 	 Rucio client intialized for account ssawant
+DEBUG 2025-02-04 13:00:30.517 UTC: 	 Command use: status
+DEBUG 2025-02-04 13:00:30.517 UTC: 	 Options use: ['-d', 'crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8']
+DEBUG 2025-02-04 13:00:30.517 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-02-04 13:00:30.573 UTC: 	 CRABClient version: v3.241125
+DEBUG 2025-02-04 13:00:30.573 UTC: 	 Instance is prod
+DEBUG 2025-02-04 13:00:30.573 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-02-04 13:00:30.573 UTC: 	 Command api workflow
+DEBUG 2025-02-04 13:00:30.573 UTC: 	 Encoded data for curl request: subresource=search&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 13:00:30.636 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch']}, 'result': ['250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', 'SUBMITTED', 'SUBMIT', '2025-02-03 20:33:12.537507', 'None', '2025-02-03 20:34:17.963323', 'None', 'CMSSW_10_6_30', 'slc7_amd64_gcc700', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'F', '0', '[]', '[]', 'EventAwareLumiBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'events_per_job': 100000, 'runs': [], 'lumis': []}", '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'ssawant', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant', 'cms', 'None', 'None', 'r1-00000000000000000000000000000000', 'F', 'T2_CH_CERN', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', "['PNet_v1_Skim.root']", '[]', "['PNet_v1.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1315', '4', '10000', '10', "['/FakeDataset/fakefile-FakePublish-d538ae35f75d102daa42615f1b83f0fd/USER']", '["Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.\\n List is (first 5 elements only): [\'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41\', \'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f\', \'...\']\\n\\nGlobal blacklist contain these T1/T2: [\'T2_CH_CERN_HLT\', \'T2_PL_Cyfronet\', \'T2_RU_ITEP\', \'T2_IT_Rome\', \'T2_RU_INR\', \'T2_US_Florida\', \'T2_TR_METU\', \'T2_PK_NCP\', \'T2_US_MIT\', \'T2_LB_HPC4L\', \'T2_RU_IHEP\', \'T2_CH_CERN_P5\', \'T2_GR_Ioannina\', \'T2_EE_Estonia\', \'T2_LV_HPCNET\', \'T2_UK_SGrid_Bristol\', \'T2_IN_TIFR\'] and 38 T3\'s\\n Full list at https\\n[... message truncated to the first 1000 chars ...]"]', 'http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'crab_script.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0197.cern.ch', 'F', '[]', 'T', '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'F', 'None', 'F', 'None', 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', '116164967', 'F', '188.185.89.194', '0.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None', 'None']}
+INFO 2025-02-04 13:00:30.637 UTC: 	 CRAB project directory:		/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 13:00:30.637 UTC: 	 Task name:			250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 13:00:30.637 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0197.cern.ch - crab-prod-tw01
+INFO 2025-02-04 13:00:30.637 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-02-04 13:00:30.637 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-02-04 13:00:30.646 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ssawant&var-task=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8&from=1738611192000&to=now
+WARNING 2025-02-04 13:00:30.646 UTC: 	 Warning:			Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.
+				 List is (first 5 elements only): ['/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f', '...']
+				
+				Global blacklist contain these T1/T2: ['T2_CH_CERN_HLT', 'T2_PL_Cyfronet', 'T2_RU_ITEP', 'T2_IT_Rome', 'T2_RU_INR', 'T2_US_Florida', 'T2_TR_METU', 'T2_PK_NCP', 'T2_US_MIT', 'T2_LB_HPC4L', 'T2_RU_IHEP', 'T2_CH_CERN_P5', 'T2_GR_Ioannina', 'T2_EE_Estonia', 'T2_LV_HPCNET', 'T2_UK_SGrid_Bristol', 'T2_IN_TIFR'] and 38 T3's
+				 Full list at https
+				[... message truncated to the first 1000 chars ...]
+DEBUG 2025-02-04 13:00:30.646 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 116164967)
+DEBUG 2025-02-04 13:00:30.646 UTC: 	 Webdir is located at http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 13:00:30.646 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 13:00:30.701 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-02-04 13:00:30.702 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl
+DEBUG 2025-02-04 13:00:30.702 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-n7me9k14.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-04 13:00:30.702 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-n7me9k14.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-02-04 13:00:30.756 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2025-02-04 13:00:30.756 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2025-02-04 13:00:30.756 UTC: 	 Got information from status cache file: {'2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt', 'T2_US_Vanderbilt'], 'ResidentSetSize': [3179348], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738661560.0], 'EndTimes': [1738662575.0], 'TotalUserCpuTimeHistory': [3013], 'TotalSysCpuTimeHistory': [19], 'WallDurations': [9.0, 37.370529890060425, 1015.0], 'JobIds': ['116164971.0'], 'State': 'finished', 'RecordedSite': True}, '6': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_DESY', 'T2_DE_DESY'], 'ResidentSetSize': [3182740], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618728.0], 'EndTimes': [1738620057.0], 'TotalUserCpuTimeHistory': [3947], 'TotalSysCpuTimeHistory': [43], 'WallDurations': [9.0, 164.23941469192505, 1329.0], 'JobIds': ['116164972.0'], 'State': 'finished', 'RecordedSite': True}, '11': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_US_FNAL', 'T1_US_FNAL'], 'ResidentSetSize': [3269816], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624990.0], 'EndTimes': [1738627045.0], 'TotalUserCpuTimeHistory': [6032], 'TotalSysCpuTimeHistory': [73], 'WallDurations': [9.0, 219.89639496803284, 2055.0], 'JobIds': ['116164973.0'], 'State': 'finished', 'RecordedSite': True}, '8': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_DE_RWTH', 'T2_DE_RWTH'], 'ResidentSetSize': [3284668], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616475.0], 'EndTimes': [1738618188.0], 'TotalUserCpuTimeHistory': [5900], 'TotalSysCpuTimeHistory': [56], 'WallDurations': [8.0, 14.306034088134766, 1713.0], 'JobIds': ['116164974.0'], 'State': 'finished', 'RecordedSite': True}, '10': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_US_FNAL', 'T1_US_FNAL'], 'ResidentSetSize': [3930892], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624992.0], 'EndTimes': [1738636004.0], 'TotalUserCpuTimeHistory': [38646], 'TotalSysCpuTimeHistory': [390], 'WallDurations': [9.0, 217.89639496803284, 11012.0], 'JobIds': ['116164975.0'], 'State': 'finished', 'RecordedSite': True}, '7': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T1_RU_JINR', 'T1_RU_JINR'], 'ResidentSetSize': [2823852], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738624989.0], 'EndTimes': [1738626476.0], 'TotalUserCpuTimeHistory': [4645], 'TotalSysCpuTimeHistory': [37], 'WallDurations': [9.0, 220.89639496803284, 1487.0], 'JobIds': ['116164976.0'], 'State': 'finished', 'RecordedSite': True}, '5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_ES_CIEMAT', 'T2_ES_CIEMAT'], 'ResidentSetSize': [3135656], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738623975.0], 'EndTimes': [1738624559.0], 'TotalUserCpuTimeHistory': [1696], 'TotalSysCpuTimeHistory': [12], 'WallDurations': [9.0, 31.802898406982422, 584.0], 'JobIds': ['116164977.0'], 'State': 'finished', 'RecordedSite': True}, '9': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2937408], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738616826.0], 'EndTimes': [1738618918.0], 'TotalUserCpuTimeHistory': [6984], 'TotalSysCpuTimeHistory': [97], 'WallDurations': [9.0, 263.5994119644165, 2092.0], 'JobIds': ['116164978.0'], 'State': 'finished', 'RecordedSite': True}, '3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Florida', 'T2_US_Florida'], 'ResidentSetSize': [2967012], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618090.0], 'EndTimes': [1738619185.0], 'TotalUserCpuTimeHistory': [3808], 'TotalSysCpuTimeHistory': [24], 'WallDurations': [9.0, 200.13722109794617, 1095.0], 'JobIds': ['116164979.0'], 'State': 'finished', 'RecordedSite': True}, '1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [2919924], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618085.0], 'EndTimes': [1738621563.0], 'TotalUserCpuTimeHistory': [12547], 'TotalSysCpuTimeHistory': [125], 'WallDurations': [9.0, 205.13722109794617, 3478.0], 'JobIds': ['116164980.0'], 'State': 'finished', 'RecordedSite': True}, '4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'ResidentSetSize': [3061252], 'SubmitTimes': [1738614928.0], 'StartTimes': [1738618087.0], 'EndTimes': [1738622144.0], 'TotalUserCpuTimeHistory': [14659], 'TotalSysCpuTimeHistory': [136], 'WallDurations': [8.0, 203.13722109794617, 4057.0], 'JobIds': ['116164981.0'], 'State': 'finished', 'RecordedSite': True}}
+INFO 2025-02-04 13:00:30.756 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2025-02-04 13:00:30.757 UTC: 	 
+Jobs status:                    finished     		100.0% (11/11)
+INFO 2025-02-04 13:00:30.757 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2025-02-04 13:00:30.757 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (10000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-04 13:00:30.757 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1315 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2025-02-04 13:00:30.757 UTC: 	 
+Summary of run jobs:
+ * Memory: 3193MB min, 3838MB max, 3080MB ave
+ * Runtime: 0:09:44 min, 3:03:32 max, 0:45:19 ave
+ * CPU eff: 73% min, 91% max, 86% ave
+ * Waste: 0:31:15 (6% of total)
+
+INFO 2025-02-04 13:00:30.810 UTC: 	 Log file is /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/crab.log
+DEBUG 2025-03-21 16:39:48.749 UTC: 	 CRAB Client version: v3.250318
+DEBUG 2025-03-21 16:39:48.750 UTC: 	 Running on: Linux lxplus940.cern.ch 5.14.0-503.22.1.el9_5.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Jan 15 08:02:15 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-03-21 16:39:48.750 UTC: 	 Using SINGULARITY image: el7:x86_64
+DEBUG 2025-03-21 16:39:48.750 UTC: 	 Operating System: CentOS Linux 7 (Core)
+DEBUG 2025-03-21 16:39:48.750 UTC: 	 Executing command: 'status'
+DEBUG 2025-03-21 16:39:48.751 UTC: 	 Found CRAB cache file /afs/cern.ch/user/s/ssawant/.crab3
+DEBUG 2025-03-21 16:39:48.792 UTC: 	 Checking credentials
+DEBUG 2025-03-21 16:39:48.792 UTC: 	 Found proxy file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-03-21 16:39:48.792 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-03-21 16:39:48.792 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-03-21 16:39:49.110 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-03-21 16:39:49.110 UTC: 	 Getting proxy life time left
+DEBUG 2025-03-21 16:39:49.110 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-03-21 16:39:49.139 UTC: 	 output : 577607
+577607
+
+ error: 
+ retcode : 0
+DEBUG 2025-03-21 16:39:49.140 UTC: 	 Proxy valid for 160:26:47 hours
+DEBUG 2025-03-21 16:39:49.140 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-03-21 16:39:49.203 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-03-21 16:39:49.203 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /afs/cern.ch/user/s/ssawant/x509up_u108989
+DEBUG 2025-03-21 16:39:49.236 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+
+ error: 
+ retcode : 0
+DEBUG 2025-03-21 16:39:49.236 UTC: 	 Getting myproxy life time left for 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-03-21 16:39:49.236 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 00e9b8c32ada56a80acf844b95bf396a489e4543
+DEBUG 2025-03-21 16:39:49.617 UTC: 	 output : username: 00e9b8c32ada56a80acf844b95bf396a489e4543
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 451:48:48  (18.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-03-21 16:39:49.618 UTC: 	 Myproxy is valid: 1626480
+DEBUG 2025-03-21 16:39:49.618 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 00e9b8c32ada56a80acf844b95bf396a489e4543  - validity: 18 days, 19:48:00
+DEBUG 2025-03-21 16:39:49.618 UTC: 	 Retrieving username ...
+DEBUG 2025-03-21 16:39:49.618 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-03-21 16:39:50.371 UTC: 	 username is ssawant
+INFO 2025-03-21 16:39:51.151 UTC: 	 Rucio client intialized for account ssawant
+DEBUG 2025-03-21 16:39:51.152 UTC: 	 Command use: status
+DEBUG 2025-03-21 16:39:51.152 UTC: 	 Options use: ['-d', 'crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8']
+DEBUG 2025-03-21 16:39:51.152 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-03-21 16:39:51.207 UTC: 	 CRABClient version: v3.250318
+DEBUG 2025-03-21 16:39:51.207 UTC: 	 Instance is prod
+DEBUG 2025-03-21 16:39:51.207 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-03-21 16:39:51.207 UTC: 	 Command api workflow
+DEBUG 2025-03-21 16:39:51.207 UTC: 	 Encoded data for curl request: subresource=search&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-03-21 16:39:51.507 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch']}, 'result': ['250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', 'SUBMITTED', 'SUBMIT', '2025-02-03 20:33:12.537507', 'None', '2025-02-03 20:34:17.963323', 'None', 'CMSSW_10_6_30', 'slc7_amd64_gcc700', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM', 'F', '0', '[]', '[]', 'EventAwareLumiBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'events_per_job': 100000, 'runs': [], 'lumis': []}", '83c4189ad8d7a75166494864099a5f27bb8525ec13d383490e9ed48074d010a9.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'ssawant', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ssawant/CN=825778/CN=Siddhesh Gopichand Sawant', 'cms', 'None', 'None', 'r1-00000000000000000000000000000000', 'F', 'T2_CH_CERN', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', "['PNet_v1_Skim.root']", '[]', "['PNet_v1.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1315', '4', '10000', '10', "['/FakeDataset/fakefile-FakePublish-d538ae35f75d102daa42615f1b83f0fd/USER']", '["Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.\\n List is (first 5 elements only): [\'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41\', \'/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f\', \'...\']\\n\\nGlobal blacklist contain these T1/T2: [\'T2_CH_CERN_HLT\', \'T2_PL_Cyfronet\', \'T2_RU_ITEP\', \'T2_IT_Rome\', \'T2_RU_INR\', \'T2_US_Florida\', \'T2_TR_METU\', \'T2_PK_NCP\', \'T2_US_MIT\', \'T2_LB_HPC4L\', \'T2_RU_IHEP\', \'T2_CH_CERN_P5\', \'T2_GR_Ioannina\', \'T2_EE_Estonia\', \'T2_LV_HPCNET\', \'T2_UK_SGrid_Bristol\', \'T2_IN_TIFR\'] and 38 T3\'s\\n Full list at https\\n[... message truncated to the first 1000 chars ...]"]', 'http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'crab_script.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0197.cern.ch', 'F', '[]', 'T', '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PNet_v2_2024_11_22/', 'F', 'None', 'F', 'None', 'SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8', 'None', '49a52bc2b07a586725f119d5919bea70d1773c2b7e1a6fbebcc0fe00ed5ef0af.tar.gz', '116164967', 'F', '188.185.89.194', '0.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None', 'None']}
+INFO 2025-03-21 16:39:51.508 UTC: 	 CRAB project directory:		/afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-03-21 16:39:51.508 UTC: 	 Task name:			250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-03-21 16:39:51.508 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0197.cern.ch - crab-prod-tw01
+INFO 2025-03-21 16:39:51.508 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-03-21 16:39:51.508 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+INFO 2025-03-21 16:39:51.517 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ssawant&var-task=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8&from=1738611192000&to=now
+WARNING 2025-03-21 16:39:51.517 UTC: 	 Warning:			Some blocks from dataset /SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM were skipped because they are only present at blacklisted, not-whitelisted, and/or non-accelerator sites.
+				 List is (first 5 elements only): ['/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#1e443625-40f6-40b3-a3f5-538a2236df41', '/SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1/MINIAODSIM#32f39022-b78d-40b3-b7b9-b21aac22021f', '...']
+				
+				Global blacklist contain these T1/T2: ['T2_CH_CERN_HLT', 'T2_PL_Cyfronet', 'T2_RU_ITEP', 'T2_IT_Rome', 'T2_RU_INR', 'T2_US_Florida', 'T2_TR_METU', 'T2_PK_NCP', 'T2_US_MIT', 'T2_LB_HPC4L', 'T2_RU_IHEP', 'T2_CH_CERN_P5', 'T2_GR_Ioannina', 'T2_EE_Estonia', 'T2_LV_HPCNET', 'T2_UK_SGrid_Bristol', 'T2_IN_TIFR'] and 38 T3's
+				 Full list at https
+				[... message truncated to the first 1000 chars ...]
+DEBUG 2025-03-21 16:39:51.517 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 116164967)
+DEBUG 2025-03-21 16:39:51.517 UTC: 	 Webdir is located at http://vocms0197.cern.ch/mon/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-03-21 16:39:51.518 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250203_203312%3Assawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-03-21 16:39:51.574 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8
+DEBUG 2025-03-21 16:39:51.595 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl
+DEBUG 2025-03-21 16:39:51.595 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-_6xt6dmi.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-03-21 16:39:51.595 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /afs/cern.ch/user/s/ssawant/x509up_u108989 --key /afs/cern.ch/user/s/ssawant/x509up_u108989 -o /tmp/crab_status-cache-_6xt6dmi.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl"
+DEBUG 2025-03-21 16:39:51.643 UTC: 	 output : 404
+ error: 
+ retcode : 0
+DEBUG 2025-03-21 16:39:51.644 UTC: 	 exitcode: 0
+stdout: 404
+stderr: 
+error details: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<hr>
+<address>Apache/2.4.62 (AlmaLinux) Server at vocms0197.cern.ch Port 80</address>
+</body></html>
+
+DEBUG 2025-03-21 16:39:51.644 UTC: 	 https://cmsweb.cern.ch:8443/scheddmon/0197/ssawant/250203_203312:ssawant_crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/status_cache.pkl not found or corrupted. Will use old format file only
+ERROR 2025-03-21 16:39:51.644 UTC: 	 Format error in status_cache. Empty file ?
+DEBUG 2025-03-21 16:39:51.644 UTC: 	 Got information from status cache file: None
+ERROR 2025-03-21 16:39:51.707 UTC: 	 Unhandled Exception!
+ERROR 2025-03-21 16:39:51.707 UTC: 	 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250318.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250318.00/bin/crab.py", line 142, in __call__
+    returnDict = self.cmd()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250318.00/lib/CRABClient/Commands/status.py", line 221, in __call__
+    combinedStatus = dagStatus = self.printDAGStatus(dbStatus, statusCacheInfo)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.250318.00/lib/CRABClient/Commands/status.py", line 406, in printDAGStatus
+    dagInfo = statusCacheInfo['DagStatus']
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2025-03-21 16:39:51.708 UTC: 	 ERROR: TypeError: 'NoneType' object is not subscriptable
+ERROR 2025-03-21 16:39:51.708 UTC: 	 
+	Please email cmstalk+computing-tools@dovecotmta.cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2025-03-21 16:39:51.708 UTC: 	 	Client Version: v3.250318
+ERROR 2025-03-21 16:39:51.708 UTC: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/s/ssawant/private/htoaa/NanoAODProduction_wPNetHToAATo4B/haa4b_NanoAODv2/r2/CMSSW_10_6_30/src/PhysicsTools/NanoAODTools/crab_haa4b_NanoAOD_2017_mc/crab/r1/crab_SUSY_GluGluH_01J_HToAATo4B_Pt150_M-12_TuneCP5_13TeV_madgraph_pythia8/crab.log to the CRAB cache.

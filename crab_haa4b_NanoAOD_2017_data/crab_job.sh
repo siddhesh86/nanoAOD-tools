@@ -49,7 +49,7 @@ else
 fi
 
 ## Check to make sure the CRAB command is valid
-if [ "$CMD" != "submit" ] && [ "$CMD" != "status" ] && [ "$CMD" != "resubmit" ] && [ "$CMD" != "getlog" ]; then
+if [ "$CMD" != "submit" ] && [ "$CMD" != "status" ] && [ "$CMD" != "resubmit" ] && [ "$CMD" != "getlog" ] && [ "$CMD" != "report" ]; then
     echo -e "\n'crab $CMD' not an option! Quitting.\n"
     exit
 fi 

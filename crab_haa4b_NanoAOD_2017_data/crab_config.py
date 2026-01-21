@@ -33,8 +33,8 @@ config.Data.outputDatasetTag = 'r1'
 config.Data.publication = False
 
 config.Data.inputDBS = 'global'
-config.Data.splitting = 'EventAwareLumiBased' # 'Automatic' 'LumiBased' 'FileBased' 'EventAwareLumiBased'
-config.Data.unitsPerJob = 100000  ## For most samples, should be < 5 hours
+config.Data.splitting = 'FileBased' # 'Automatic' 'LumiBased' 'FileBased' 'EventAwareLumiBased'
+config.Data.unitsPerJob = 1 #100000  ## For most samples, should be < 5 hours
 #config.Data.unitsPerJob = 10000  ## Perform a small test
 #config.Data.totalUnits = 1 #100000  ## Perform a small test
 config.Data.lumiMask = 'https://cms-service-dqmdc.web.cern.ch/CAF/certification/Collisions17/13TeV/Legacy_2017/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt'
@@ -42,3 +42,4 @@ config.Data.outLFNDirBase = '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/data/
 
 config.Site.storageSite = 'T2_CH_CERN' # Choose your site
 config.Site.ignoreGlobalBlacklist = True
+config.Site.whitelist = ['T2_CH_CERN'] # whitelist sites

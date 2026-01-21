@@ -51,7 +51,7 @@ in_files = ['/store/mc/RunIISummer20UL17MiniAODv2/SUSY_GluGluH_01J_HToAATo4B_Pt1
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring(in_files[0]),
+    fileNames = cms.untracked.vstring(in_files),
     secondaryFileNames = cms.untracked.vstring()
 )
 

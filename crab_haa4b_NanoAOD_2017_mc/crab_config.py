@@ -42,6 +42,7 @@ config.Data.outLFNDirBase = '/store/group/phys_susy/HToaaTo4b/NanoAOD/2017/MC/PN
 
 config.Site.storageSite = 'T2_CH_CERN' # Choose your site
 config.Site.ignoreGlobalBlacklist = True
+config.Site.whitelist = ['T2_CH_CERN'] # whitelist sites
 
 ## QCD HT >=500: splitting = 'EventAwareLumiBased', unitsPerJob = 10000
 ## TTSemilep: splitting = 'EventAwareLumiBased', unitsPerJob = 50000
